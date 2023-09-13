@@ -1,0 +1,585 @@
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+li {
+  line-height: 160%;
+}
+body {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--dark-blue-color);
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.container-main {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.container-header-footer {
+  max-width: 1720px;
+  margin: 0 auto;
+}
+:root {
+  --dark-blue-color: #141024;
+  --white-color: #ffffff;
+  --red-color: #d52027;
+  --light-grey-color: #f9f9f9;
+  --dark-button-color: #230b34;
+}
+a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+/* Хедер */
+.header {
+  min-height: 1080px;
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  padding-top: 30px;
+  margin-bottom: 120px;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 82px;
+}
+.logo {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 160%;
+}
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.main-menu li {
+  margin-right: 40px;
+  font-size: 20px;
+  line-height: 160%;
+}
+.main-menu li:last-child {
+  margin-right: 0;
+}
+.phone {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 160%;
+}
+.promo {
+  /* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* margin: 0 auto; */
+  /* width: 1000px; */
+  /* padding-left: 280px; */
+}
+.promo-content {
+  padding-top: 182px;
+  max-width: 550px;
+  padding-right: 28px;
+  position: relative;
+}
+.promo-title {
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 160%;
+  margin-bottom: 21px;
+}
+.promo-text {
+  font-size: 20px;
+  line-height: 160%;
+  margin-bottom: 50px;
+}
+.promo-button {
+  display: inline-block;
+  padding: 25px 54px;
+  background-color: var(--red-color);
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 160%;
+}
+.promo-img {
+  max-width: 783px;
+  max-height: 918px;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+/* О курсах */
+.about {
+  max-height: 500px;
+  margin-bottom: 120px;
+}
+.about-content {
+  font-size: 30px;
+  line-height: 160%;
+  max-width: 891px;
+  margin-bottom: 60px;
+}
+.about-content span {
+  font-weight: 600;
+}
+.aboun-group {
+  display: flex;
+}
+.about-item {
+  margin-right: 40px;
+  max-width: 260px;
+}
+.about-item:last-child {
+  margin-right: 0;
+}
+.about-number {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 160%;
+  color: var(--red-color);
+}
+.about-description {
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--dark-blue-color);
+  opacity: 0.7;
+}
+/* Что вы получите от курса */
+.getting {
+  max-height: 485px;
+  background-color: var(--light-grey-color);
+  padding-top: 98px;
+  padding-bottom: 100px;
+}
+.getting-title {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--dark-blue-color);
+  margin-bottom: 56px;
+  line-height: 160%;
+}
+.getting-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.getting-item {
+  max-width: 360px;
+}
+.getting-item__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark-blue-color);
+  margin-bottom: 20px;
+  line-height: 160%;
+}
+.getting-item__content {
+  font-size: 18px;
+  color: var(--dark-blue-color);
+  opacity: 0.7;
+}
+.practic {
+  position: relative;
+}
+.getting-item .information-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(20, 16, 36, 0.08);
+  text-align: center;
+  line-height: 1.6;
+  /* vertical-align: center; */
+  transform: translateX(10px);
+  font-size: 12px;
+  position: absolute;
+  padding: 4px 10px;
+}
+.information {
+  display: none;
+}
+.information-icon:hover ~ .information {
+  display: inline-block;
+  position: absolute;
+  background-color: var(--white-color);
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  filter: drop-shadow(0 2px 8px rgba(20, 16, 36, 0.1));
+  transform: translate(10px, -70px);
+  /* letter-spacing: 0; */
+}
+/* Наши тренеры */
+.trainers {
+  max-height: 1560px;
+  padding-top: 123px;
+  position: relative;
+}
+.trainers-title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+.trainers-group {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.trainers-item {
+  margin-right: 40px;
+  cursor: pointer;
+}
+.trainers-group:last-child {
+  margin-right: 0;
+}
+.trainers-item img {
+  margin-bottom: 20px;
+}
+.trainers-name {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.trainers-speciality {
+  margin-bottom: 20px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+.more {
+  color: var(--red-color);
+  font-size: 18px;
+  cursor: pointer;
+}
+.scrolling {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow i {
+  color: var(--dark-button-color);
+  font-size: 33px;
+  /* cursor: pointer; */
+}
+.arrow-unlocked {
+  opacity: 1;
+  transition: 0.7s;
+  cursor: pointer;
+}
+.arrow-locked {
+  opacity: 0.5;
+  transition: 0.7s;
+  cursor: auto;
+}
+/* Тарифы */
+.package {
+  padding-top: 115px;
+  min-height: 760px;
+}
+.package-title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+.package-group {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 120px;
+}
+.package-item {
+  text-align: center;
+  height: 460px;
+  border: 1px solid rgba(20, 16, 36, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  cursor: pointer;
+}
+.package-name {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 63px;
+}
+.package-price {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.package-subject {
+  font-size: 18px;
+}
+.bid {
+  display: inline-block;
+  background-color: var(--red-color);
+  font-size: 18px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.chosen {
+  height: 500px;
+  /* max-width: 360px; */
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+.chosen .package-name {
+  margin-bottom: 83px;
+}
+/* Форма заявки */
+.registration {
+  min-height: 460px;
+  background-image: url(../img/bg-form2.png);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-color: var(--red-color);
+  padding-top: 87px;
+}
+.registration-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.registration-content {
+  padding-top: 19px;
+  color: var(--white-color);
+}
+.discount {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.stock {
+  font-size: 20px;
+  line-height: 1.3;
+}
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.registration-form input {
+  height: 64px;
+  padding: 19px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: auto;
+}
+.registration-form input[type="submit"] {
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+/* Футер */
+.footer {
+  min-height: 159px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-logo {
+}
+.footer-name {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.copyright {
+  font-size: 16px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+/* Модальные окна */
+/* Затемнение при открытии модалки */
+.blackout {
+  background-color: rgba(20, 16, 36, 0.1);
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* z-index: 100; */
+}
+
+/* Модальное окно */
+.modal__trainers {
+  width: 940px;
+  height: 770px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--white-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* .show {
+  display: block;
+} */
+.modal__header {
+  margin-bottom: 40px;
+  position: relative;
+}
+.modal__photo {
+  min-height: 222px;
+  max-width: 160px;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+.modal__info {
+  display: inline-block;
+  vertical-align: top;
+}
+.modal__name {
+  font-style: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.modal__sreciality {
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+.modal-contacts a {
+  font-size: 30px;
+  margin-right: 10px;
+  color: var(--dark-blue-color);
+  cursor: pointer;
+}
+.modal-contacts a:last-child {
+  margin-right: 0;
+}
+.modal__close {
+  color: var(--dark-blue-color);
+  font-size: 18px;
+  opacity: 0.7;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+.modal__trainers li {
+  list-style: none;
+}
+.modal__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+  margin-bottom: 20px;
+}
+.modal__menu li {
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal__active {
+  color: var(--red-color);
+}
+.modal__disabled {
+  color: rgba(20, 16, 36, 0.2);
+  cursor: auto;
+}
+.modal__education {
+  overflow-y: scroll;
+  max-height: 360px;
+  /* max-height: 100%; */
+  padding-bottom: 3em;
+  padding-right: 15px;
+  /* position: relative; */
+}
+.modal__education li {
+  font-size: 20px;
+}
+.modal__education-list {
+  margin-bottom: 40px;
+}
+.modal__education-list li {
+}
+.modal_courses {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.modal__courses-list {
+}
+.modal__courses-list li {
+}
+.modal__shadow {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+  height: 5em;
+  width: 90%;
+}
+/* .modal__education {
+  overflow-y: scroll;
+  position: relative;
+}
+.modal__education:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 2.5em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+  pointer-events: none;
+} */
+/* Полоса прокрутки в модальном окне*/
+.modal__education::-webkit-scrollbar {
+  width: 5px;
+}
+.modal__education::-webkit-scrollbar-track {
+  background-color: rgba(20, 16, 36, 0.08);
+  border-radius: 40px;
+}
+.modal__education::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue-color);
+  border-radius: 40px;
+}
